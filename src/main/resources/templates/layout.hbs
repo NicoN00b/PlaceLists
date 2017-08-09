@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{#block "title"}}Places Log{{/block}}</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-</head>
-<body>
-<ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="/posts">See All Posts</a></li>
-    <li role="presentation"><a href="/posts/new">Add a New Post</a></li>
-</ul>
-<div class="container">
-    <!--begin main template-->
-    <div class="page-header">
-        <img src="/images/caspar-rubin-224229.jpg" width="70%">
-        <h1>Welcome to my Epicodus Blog. <small>A journey into code!</small></h1>
-    </div>
+        <title>{{#block "title"}}Places Visited Journal{{/block}}</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h2>Places You've Been</h2>
+            </div>
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="/places">See All Placess</a></li>
+                <li role="presentation"><a href="/places/new">Add a New Place</a></li>
+            </ul>
+            <div class="container">
+                <!--begin main template-->
+                <div class="page-header" class="well">
+                    <h1>Welcome to my travel journal.</h1>
+                </div>
 
-    <div class="col-md-12">
-        {{#block "content"}}
-        {{/block}}
+                <div class="col-md-12">
+                    {{#block "content"}}
+                    {{/block}}
 
-    </div>
-</div>
-<!--end main template-->
-{{#block "footer"}}
-   <footer class="footer">
-       <div class="container">
-           <p class="text-muted"><a href="/posts/delete">DELETE ALL POSTS</a></p>
-       </div>
-   </footer>
-   </body>
-   </html>
+                </div>
+            </div>
+         </div>
+    <!--end main template-->
+    {{#block "footer"}}
+       <footer class="footer">
+           <div class="container">
+               <p class="text-muted"><a href="/places/delete">DELETE ALL Places</a></p>
+           </div>
+       </footer>
+    </body>
+</html>
 {{/block}}

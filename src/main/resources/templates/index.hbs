@@ -1,0 +1,21 @@
+{{#partial "content"}}
+
+    <h1>Place list!</h1>
+
+    {{#if places}}
+        {{#each places }}
+        <p>Place:</p>
+           <ul>
+               <li>{{name}}</li>
+               <li>{{location}}</li>
+               <li>{{dateVisited}}</li>
+               <li>Created At: {{createdAt}}</li>
+           </ul>
+            <p>{{ name }} <a href="/places/{{id}}">read more...</a></p>
+        {{/each}}
+    {{else}}
+        <p>No place added!</p>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

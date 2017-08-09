@@ -1,0 +1,13 @@
+{{#partial "content"}}
+   <p>Place:</p>
+   <ul>
+   <li>{{place.name}}</li>
+   <li>{{place.location}}</li>
+   <li>{{place.dateVisited}}</li>
+   <li>Created At: {{place.createdAt}}</li>
+   <p>
+       <a href="/places/{{place.id}}/update">Edit this entry</a>
+       <a href="/places/{{place.id}}/delete">DELETE this entry (no undo)</a>
+   </p>
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,13 @@
+.jumbotron {
+    background-color: crimson;
+    color: white;
+    text-align: center;
+}
+body {
+    background-image: url("../images/city.jpg");
+    background-repeat: no repeat;
+    }
+
+h2 {
+    color: red;
+    }

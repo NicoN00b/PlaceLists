@@ -5,6 +5,7 @@ import java.util.ArrayList;
  * Created by Guest on 8/9/17.
  */
 public class Place {
+
     private String name;
     private String location;
     private LocalDateTime createdAt;
@@ -13,7 +14,7 @@ public class Place {
     private static ArrayList<Place> funPlaces = new ArrayList<>();
     private int id;
 
-    public Place(String name){
+    public Place(String name, String location, String dateVisited){
         this.name = name;
         this.location = location;
         this.createdAt = LocalDateTime.now();
@@ -59,5 +60,18 @@ public class Place {
     public void deletePlace(){
         funPlaces.remove(id-1); //same reason
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getDateVisited() {
+        return dateVisited;
+    }
+
+    public static ArrayList<Place> getFunPlaces() {
+        return funPlaces;
+    }
+
 
 }
