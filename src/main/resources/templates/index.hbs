@@ -4,14 +4,16 @@
 
     {{#if places}}
         {{#each places }}
-        <p>Place:</p>
-           <ul>
-               <li>{{name}}</li>
-               <li>{{location}}</li>
-               <li>{{dateVisited}}</li>
-               <li>Created At: {{createdAt}}</li>
-           </ul>
+         <div class="emphasized">
+            <p>Place {{id}}:</p>
+               <ul>
+                   <li>{{name}}</li>
+                   <li>{{location}}</li>
+                   <li>{{dateVisited}}</li>
+                   <li>Created At: {{createdAt}}</li>
+               </ul>
             <p>{{ name }} <a href="/places/{{id}}">read more...</a></p>
+         </div>
         {{/each}}
     {{else}}
         <p>No place added!</p>

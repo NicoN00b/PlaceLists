@@ -32,6 +32,13 @@ import static spark.Spark.*;
                 return new ModelAndView(model, "index.hbs");
             }, new HandlebarsTemplateEngine());
 
+            get("/places", (request, response) -> {
+                Map<String, Object> model = new HashMap<String, Object>();
+                ArrayList<Place> places = Place.getAll();
+                model.put("places", places);
+                return new ModelAndView(model, "index.hbs");
+            }, new HandlebarsTemplateEngine());
+
             get("/places/delete", (req, res) -> {
                 Map<String, Object> model = new HashMap<>();
                 Place.clearAllPlaces();

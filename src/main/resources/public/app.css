@@ -2,6 +2,7 @@
     background-color: crimson;
     color: white;
     text-align: center;
+    width: 100%;
 }
 body {
     background-image: url("../images/city.jpg");
@@ -10,4 +11,9 @@ body {
 
 h1 {
     color: red;
-    }
+ }
+
+.emphasized {
+    color: white;
+    font-size: 20px;
+}
